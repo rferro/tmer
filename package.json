@@ -12,9 +12,14 @@
     "benchmark",
     "benchmarking"
   ],
-  "main": "lib",
-  "dependencies": {
-    "normat": "^1.2.3"
+  "main": "dist/tmer.min.js",
+  "devDependencies": {
+    "babel-core": "^6.26.0",
+    "babel-loader": "^7.1.2",
+    "babel-preset-env": "^1.6.0",
+    "browser-process-hrtime": "^0.1.2",
+    "normat": "^1.2.3",
+    "webpack": "^3.5.5"
   },
   "author": "Ricardo Ferro <ricardo.ferro@gmail.com>",
   "license": "MIT",
@@ -24,5 +29,14 @@
   },
   "bugs": {
     "url": "https://github.com/rferro/tmer/issues"
+  },
+  "babel": {
+    "presets": [
+      ["env", {
+        "targets": {
+          "browsers": ["last 2 versions"]
+        }
+      }]
+    ]
   }
 }
