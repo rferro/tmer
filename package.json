@@ -28,7 +28,8 @@
     "sort-package-json": "npx sort-package-json",
     "test": "jest -c jest/config.js",
     "test:watch": "npm test -- --verbose --watchAll",
-    "prettier": "prettier-standard 'src/**/*.js'"
+    "prettier": "prettier-standard 'src/**/*.js'",
+    "release": "standard-version"
   },
   "devDependencies": {
     "@commitlint/cli": "^7.1.1",
@@ -40,7 +41,8 @@
     "normat": "^1.2.3",
     "prettier-standard": "^8.0.1",
     "snazzy": "^8.0.0",
-    "standard": "^11.0.1"
+    "standard": "^11.0.1",
+    "standard-version": "^4.4.0"
   },
   "engines": {
     "node": ">=8"
@@ -64,5 +66,8 @@
   },
   "dependencies": {
     "eslint": "^5.5.0"
+  },
+  "publishConfig": {
+    "access": "public"
   }
 }
