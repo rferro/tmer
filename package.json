@@ -1,42 +1,68 @@
 {
   "name": "tmer",
-  "version": "0.1.0",
-  "description": "Simple timer for node.js",
+  "version": "1.0.0",
+  "description": "Simple timer for Node.js and browser",
   "keywords": [
+    "benchmark",
+    "benchmarking",
     "hrtime",
-    "timer",
     "profile",
     "time",
     "timeEnd",
     "timeStart",
-    "benchmark",
-    "benchmarking"
+    "timer"
   ],
-  "main": "dist/tmer.min.js",
-  "devDependencies": {
-    "babel-core": "^6.26.0",
-    "babel-loader": "^7.1.2",
-    "babel-preset-env": "^1.6.0",
-    "browser-process-hrtime": "^0.1.2",
-    "normat": "^1.2.3",
-    "webpack": "^3.5.5"
+  "bugs": {
+    "url": "https://github.com/rferro/tmer/issues"
   },
-  "author": "Ricardo Ferro <ricardo.ferro@gmail.com>",
-  "license": "MIT",
   "repository": {
     "type": "git",
     "url": "https://github.com/rferro/tmer.git"
   },
-  "bugs": {
-    "url": "https://github.com/rferro/tmer/issues"
+  "license": "MIT",
+  "author": "Ricardo Ferro <ricardo.ferro@gmail.com>",
+  "main": "dist/tmer.min.js",
+  "scripts": {
+    "deps-check": "npx npm-check --skip-unused --update",
+    "lint": "standard | snazzy",
+    "sort-package-json": "npx sort-package-json",
+    "test": "jest -c jest/config.js",
+    "test:watch": "npm test -- --verbose --watchAll",
+    "prettier": "prettier-standard 'src/**/*.js'"
   },
-  "babel": {
-    "presets": [
-      ["env", {
-        "targets": {
-          "browsers": ["last 2 versions"]
-        }
-      }]
+  "devDependencies": {
+    "@commitlint/cli": "^7.1.1",
+    "@commitlint/config-conventional": "^7.1.1",
+    "browser-process-hrtime": "^0.1.2",
+    "husky": "^0.14.3",
+    "jest": "^23.5.0",
+    "jest-extended": "^0.8.1",
+    "normat": "^1.2.3",
+    "prettier-standard": "^8.0.1",
+    "snazzy": "^8.0.0",
+    "standard": "^11.0.1"
+  },
+  "engines": {
+    "node": ">=8"
+  },
+  "commitlint": {
+    "extends": [
+      "@commitlint/config-conventional"
     ]
+  },
+  "husky": {
+    "hooks": {
+      "commit-msg": "commitlint -e $GIT_PARAMS"
+    }
+  },
+  "standard": {
+    "env": [
+      "jest"
+    ],
+    "globals": [],
+    "ignore": []
+  },
+  "dependencies": {
+    "eslint": "^5.5.0"
   }
 }
