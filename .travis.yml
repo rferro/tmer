@@ -9,13 +9,19 @@ cache:
   directories:
     - node_modules
 
-install:
-  - npm install
+before_script:
   - npm install -g coveralls
 
 script:
   - npm run lint
   - npm run test
+
+deploy:
+  provider: npm
+  email: ricardo.ferro@gmail.com
+  api_key: $NPM_TOKEN
+  on:
+    tags: true
 
 after_script:
   - cat ./coverage/lcov.info | coveralls
