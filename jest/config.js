@@ -2,7 +2,7 @@
 module.exports = {
   collectCoverage: true,
   collectCoverageFrom: ['src/**/*.{js,jsx}'],
-  coverageReporters: ['html', 'text', 'text-summary'],
+  coverageReporters: ['html', 'json', 'lcov', 'text', 'text-summary'],
   notify: false,
   notifyMode: 'failure',
   rootDir: '../',
