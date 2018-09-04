@@ -1,6 +1,6 @@
 {
   "name": "tmer",
-  "version": "1.3.2",
+  "version": "1.3.3",
   "description": "Simple timer for Node.js and browser",
   "keywords": [
     "benchmark",
@@ -11,6 +11,9 @@
     "timeEnd",
     "timeStart",
     "timer"
+  ],
+  "files": [
+    "dist"
   ],
   "bugs": {
     "url": "https://github.com/rferro/tmer/issues"
