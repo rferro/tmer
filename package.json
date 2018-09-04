@@ -1,6 +1,6 @@
 {
   "name": "tmer",
-  "version": "1.3.4",
+  "version": "1.3.5",
   "description": "Simple timer for Node.js and browser",
   "keywords": [
     "benchmark",
@@ -12,10 +12,6 @@
     "timeStart",
     "timer"
   ],
-  "files": [
-    "lib",
-    "dist"
-  ],
   "bugs": {
     "url": "https://github.com/rferro/tmer/issues"
   },
@@ -25,17 +21,20 @@
   },
   "license": "MIT",
   "author": "Ricardo Ferro <ricardo.ferro@gmail.com>",
-  "unpkg": "dist/tmer.min.js",
+  "files": [
+    "lib",
+    "dist"
+  ],
   "main": "lib",
   "scripts": {
     "build": "parcel build --no-source-maps --global tmer -o dist/tmer.min.js lib/tmer.js",
     "deps-check": "npx npm-check --skip-unused --update",
     "lint": "standard | snazzy",
+    "release": "standard-version",
     "sort-package-json": "npx sort-package-json",
     "test": "jest -c jest/config.js",
     "test:watch": "npm test -- --verbose --watchAll",
-    "prettier": "prettier-standard 'lib/**/*.js'",
-    "release": "standard-version"
+    "prettier": "prettier-standard 'lib/**/*.js'"
   },
   "devDependencies": {
     "@commitlint/cli": "^7.1.1",
@@ -54,6 +53,9 @@
   "engines": {
     "node": ">=8"
   },
+  "publishConfig": {
+    "access": "public"
+  },
   "commitlint": {
     "extends": [
       "@commitlint/config-conventional"
@@ -71,7 +73,5 @@
     "globals": [],
     "ignore": []
   },
-  "publishConfig": {
-    "access": "public"
-  }
+  "unpkg": "dist/tmer.min.js"
 }
