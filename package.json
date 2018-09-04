@@ -22,17 +22,15 @@
   "license": "MIT",
   "author": "Ricardo Ferro <ricardo.ferro@gmail.com>",
   "unpkg": "dist/tmer.min.js",
-  "main": "dist/tmer.node.js",
+  "main": "lib",
   "scripts": {
-    "build": "npm run build:browser && npm run build:node",
-    "build:browser": "parcel build --no-source-maps --global tmer -o dist/tmer.min.js src/tmer.js",
-    "build:node": "parcel build --no-source-maps -o dist/tmer.node.js src/tmer.js",
+    "build": "parcel build --no-source-maps --global tmer -o dist/tmer.min.js lib/tmer.js",
     "deps-check": "npx npm-check --skip-unused --update",
     "lint": "standard | snazzy",
     "sort-package-json": "npx sort-package-json",
     "test": "jest -c jest/config.js",
     "test:watch": "npm test -- --verbose --watchAll",
-    "prettier": "prettier-standard 'src/**/*.js'",
+    "prettier": "prettier-standard 'lib/**/*.js'",
     "release": "standard-version"
   },
   "devDependencies": {
