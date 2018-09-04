@@ -11,11 +11,15 @@ cache:
 
 before_script:
   - npm install -g coveralls
-  - set +e
 
 script:
   - npm run lint
   - npm run test
+
+after_success:
+  - cat ./coverage/lcov.info | coveralls
+
+before_deploy:
   - npm run build
 
 deploy:
@@ -26,8 +30,5 @@ deploy:
   on:
     tags: true
     node: 8
-
-after_script:
-  - cat ./coverage/lcov.info | coveralls
 
 sudo: false
