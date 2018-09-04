@@ -1,6 +1,6 @@
 {
   "name": "tmer",
-  "version": "1.4.3",
+  "version": "1.4.4",
   "description": "Simple timer for Node.js and browser",
   "keywords": [
     "benchmark",
