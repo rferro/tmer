@@ -21,7 +21,8 @@
   },
   "license": "MIT",
   "author": "Ricardo Ferro <ricardo.ferro@gmail.com>",
-  "main": "dist/tmer.min.js",
+  "unpkg": "dist/tmer.min.js",
+  "main": "dist/tmer.node.js",
   "scripts": {
     "deps-check": "npx npm-check --skip-unused --update",
     "lint": "standard | snazzy",
