@@ -11,6 +11,7 @@ cache:
 
 before_script:
   - npm install -g coveralls
+  - set +e
 
 script:
   - npm run lint
