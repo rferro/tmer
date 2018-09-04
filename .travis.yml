@@ -15,13 +15,16 @@ before_script:
 script:
   - npm run lint
   - npm run test
+  - npm run build
 
 deploy:
   provider: npm
   email: ricardo.ferro@gmail.com
   api_key: $NPM_TOKEN
+  skip_cleanup: true
   on:
     tags: true
+    node: 8
 
 after_script:
   - cat ./coverage/lcov.info | coveralls
