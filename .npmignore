@@ -1,0 +1,10 @@
+**/__mocks__/**
+**/__tests__/**
+**/*.spec.*
+**/*.test.*
+.cache
+coverage
+jest
+src
+.travis.yml
+.circleci
