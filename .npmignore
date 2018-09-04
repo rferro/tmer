@@ -5,6 +5,5 @@
 .cache
 coverage
 jest
-src
 .travis.yml
 .circleci
