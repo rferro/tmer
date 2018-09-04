@@ -1,6 +1,6 @@
 {
   "name": "tmer",
-  "version": "1.3.3",
+  "version": "1.3.4",
   "description": "Simple timer for Node.js and browser",
   "keywords": [
     "benchmark",
@@ -13,6 +13,7 @@
     "timer"
   ],
   "files": [
+    "lib",
     "dist"
   ],
   "bugs": {
