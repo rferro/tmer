@@ -1,4 +1,3 @@
-
 language: node_js
 
 node_js:
@@ -8,6 +7,10 @@ node_js:
 cache:
   directories:
     - node_modules
+
+env:
+  global:
+    secure: jl3GHcchEex+ozDKwcAsvNbTJd79bCGmpd1tGaWdhkRwa4lUEDZN5rh3tqvJsAZoftCUGMjA51tHDLl5JVBY1616cPkaK0P6CdfBCGdOisD8sDT81NaSYJF1u8jirMOuT/NO2erV/A378uO6X/5lX/bgVeENzk197iXqnCjguaBgIreEeFKhj84qox/hoUojpEgGv6jnF1vLb4oje47tDh/1YIv7h0gLYtSNmkjBfFY2UcQ8NxKyqyNjJ/s1zcjePvTGVp3aIkGCweHqbNPcDwkqQZBU3Lms8wJWeyhulvz38X7dqnc0G9M2iHWLJeehTXotA2ApnWj4RJeLITAfTKVMwAAe4gFjdgqk7f/BpSXEW/ZVIrYf/nzREs0R5jPWnLZ9dTChqA6vsvONfDRMgfnbcAWZ/jE20JYMVslYuTg5Ep1ufLLtAzQFvmKSqvpykq549I6xrnhk0+Bds4FR5JKLp7PbwNDbCWF9N1OAwbcvB6pQTjWzfHZQw8XyGxCrkKwO3Vc+eqwPokxQ30p3o0bFAc5iIsai/xBzGRNk/FbgVid8GMMNZHb3KRRHzcHzQspk9K3mzxNzXIPUUyYW8iod2qGhXKawxQSbUTBwaF8x+BY0knPirFd7zRWMEppjnxKzz4Vub3orfLs45mZP187cH2RXyUzTTT/kaW7TZFk=
 
 before_script:
   - npm install -g coveralls
@@ -23,10 +26,8 @@ after_success:
 deploy:
   provider: npm
   email: ricardo.ferro@gmail.com
-  api_key: $NPM_TOKEN
+  api_key: "$NPM_TOKEN"
   skip_cleanup: true
   on:
     tags: true
     node: 8
-
-sudo: false
