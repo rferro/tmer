@@ -24,6 +24,9 @@
   "unpkg": "dist/tmer.min.js",
   "main": "dist/tmer.node.js",
   "scripts": {
+    "build": "npm run build:browser && npm run build:node",
+    "build:browser": "parcel build --no-source-maps --global tmer -o dist/tmer.min.js src/tmer.js",
+    "build:node": "parcel build --no-source-maps -o dist/tmer.node.js src/tmer.js",
     "deps-check": "npx npm-check --skip-unused --update",
     "lint": "standard | snazzy",
     "sort-package-json": "npx sort-package-json",
@@ -40,6 +43,7 @@
     "jest": "^23.5.0",
     "jest-extended": "^0.8.1",
     "normat": "^1.2.3",
+    "parcel-bundler": "^1.9.7",
     "prettier-standard": "^8.0.1",
     "snazzy": "^8.0.0",
     "standard": "^11.0.1",
