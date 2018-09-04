@@ -2,6 +2,16 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+<a name="1.4.0"></a>
+# [1.4.0](https://github.com/rferro/tmer/compare/v1.3.5...v1.4.0) (2018-09-04)
+
+
+### Features
+
+* fix build script ([2edebf4](https://github.com/rferro/tmer/commit/2edebf4))
+
+
+
 <a name="1.3.5"></a>
 ## [1.3.5](https://github.com/rferro/tmer/compare/v1.3.4...v1.3.5) (2018-09-04)
 
