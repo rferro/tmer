@@ -27,7 +27,7 @@
   ],
   "main": "lib",
   "scripts": {
-    "build": "parcel build --no-source-maps --global tmer -o dist/tmer.min.js lib/tmer.js",
+    "build": "parcel build --no-source-maps --global tmer -o dist/tmer.min.js lib/index.js",
     "deps-check": "npx npm-check --skip-unused --update",
     "lint": "standard | snazzy",
     "release": "standard-version",
