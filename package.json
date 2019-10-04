@@ -32,8 +32,7 @@
     "lint": "standard | snazzy",
     "release": "standard-version",
     "sort-package-json": "npx sort-package-json",
-    "test": "jest -c jest/config.js",
-    "test:watch": "npm test -- --verbose --watchAll",
+    "test": "tap lib/index.spec.js",
     "prettier": "prettier-standard 'lib/**/*.js'"
   },
   "devDependencies": {
@@ -41,14 +40,13 @@
     "@commitlint/config-conventional": "^7.1.1",
     "browser-process-hrtime": "^0.1.2",
     "husky": "^0.14.3",
-    "jest": "^23.5.0",
-    "jest-extended": "^0.8.1",
     "normat": "^1.2.3",
     "parcel-bundler": "^1.9.7",
     "prettier-standard": "^8.0.1",
     "snazzy": "^8.0.0",
     "standard": "^11.0.1",
-    "standard-version": "^4.4.0"
+    "standard-version": "^4.4.0",
+    "tap": "^14.6.9"
   },
   "engines": {
     "node": ">=8"
