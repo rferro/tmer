@@ -1,4 +1,3 @@
-
 # tmer
 
 Simple timer for node.js
@@ -14,16 +13,14 @@ npm install --save tmer
 ## Example
 
 ```javascript
+const tmer = require("tmer");
 
-var tmer = require('tmer');
+const start = tmer();
 
-var start = tmer();
-
-setTimeout(function () {
+setTimeout(function() {
   console.log(start()); // out: ~2000
   console.log(start(true)); // out: '2s'
 }, 2000);
-
 ```
 
 ## License
